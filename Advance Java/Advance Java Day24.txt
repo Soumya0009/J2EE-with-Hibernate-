@@ -1,0 +1,72 @@
+Date: 24th April 2023					Advance Java 				Balaji Sir 						Day-24
+-------------------					-------------				----------							------
+(Image Link:https://drive.google.com/file/d/1G_pOVUi8vm0k682ycla_YL-O3XlU1CCM/view?usp=share_link)
+(Image Link:https://drive.google.com/file/d/1G_94kpAh1s2gv-SSsNbhGAvVlNdeqHYd/view?usp=share_link)
+
+Todays Coading
+--------------
+package com.org;
+
+public class CarDTO {
+	int id ;
+	String cname;
+	double price;
+}
+
+package com.org;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class CarCrud {
+	public static int saveCar(CarDTO c) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/car_orm?user=root&password=root");
+			String sqlString = "Insert into car values(?,?,?)";
+			PreparedStatement pStatement = connection.prepareStatement(sqlString);
+			
+			pStatement.setInt(1, c.id);
+			pStatement.setString(2, c.cname);
+			pStatement.setDouble(3, c.price);
+			
+			int res = pStatement.executeUpdate();
+			connection.close();
+			return res;
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
+	}
+}
+
+package com.org;
+
+import java.util.Scanner;
+
+public class CarController {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		CarDTO carDTO =  new CarDTO();
+		System.out.println("Enter Car ID");
+		carDTO.id = scanner.nextInt();
+		scanner.nextLine();
+		System.out.println("Enter Car Name");
+		carDTO.cname = scanner.nextLine();
+		System.out.println("Enter car Price");
+		carDTO.price = scanner.nextDouble();
+		CarCrud.saveCar(carDTO);
+		System.out.println(carDTO.id);
+		System.out.println(carDTO.cname);
+		System.out.println(carDTO.price);
+	}
+
+}
+

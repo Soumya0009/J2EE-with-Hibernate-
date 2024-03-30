@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Book Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&display=swap"
+	rel="stylesheet">
+<style>
+* {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+	background: linear-gradient(135.8deg, rgb(26, 26, 29) 27.1%, rgb(111, 34, 50) 77.5%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+.card {
+	border: 1px solid #ddd;
+	background: linear-gradient(135.8deg, rgb(26, 26, 29) 27.1%, rgb(111, 34, 50) 77.5%);
+	color: #333;
+	width: 300px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 30px rgba(255, 140, 0, 0.6);
+}
+
+h1 {
+	text-align: center;
+	color: #ff8c00;
+	text-shadow: 0 0 10px rgba(255, 140, 0, 0.9);
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group input[type="email"], .form-group input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	background-color: transparent;
+	color: #ff8c00;
+	text-shadow: 0 0 2px rgba(255, 140, 0, 0.6);
+	display: block;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+
+.form-group input[type="submit"] {
+	background-color: transparent;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
+	transition: box-shadow 0.3s;
+}
+
+.form-group input[type="submit"]:hover {
+	background-color: transparent;
+	border: 1px solid #ff8c00;
+	color: #ff8c00;
+	box-shadow: 0 0 20px rgba(255, 140, 0, 0.9);
+}
+
+.form-group a {
+	color: #ff8c00;
+	text-decoration: none;
+	text-shadow: 0 0 5px rgba(255, 140, 0, 0.6);
+}
+
+@media ( max-width : 600px) {
+	.card {
+		width: 90%;
+	}
+}
+</style>
+</head>
+<body>
+	<div class="card">
+		<h1>Student Book Login</h1>
+		<form action="login" method="post">
+			<div class="form-group">
+				<input type="email" name="email" placeholder="Email" required>
+			</div>
+			<div class="form-group">
+				<input type="password" name="pass" placeholder="Password"
+					required>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Log In">
+			</div>
+			<div class="form-group">
+				<a href="signup.html">Don't have an account? Sign up now</a>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

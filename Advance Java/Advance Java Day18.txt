@@ -1,0 +1,40 @@
+Date: 12th April 2023					Advance Java 				Balaji Sir 						Day-18
+---------------------					------------				----------						------
+(Image Link: https://drive.google.com/file/d/1FQlDG5HZ3UaHO95ChyQTfc3StDcFHZE2/view?usp=share_link)
+(Image Link: https://drive.google.com/file/d/1FQx5XhzUdKHrqED8v7-Zduqw-kZ_Sk7f/view?usp=share_link)
+(Image Link: https://drive.google.com/file/d/1FSDa500mhGtSSzGZwaL6mIbnSd4a538O/view?usp=share_link)
+(Image Link: https://drive.google.com/file/d/1FZuCqtI9dRGDB2RpYd-AdvbyD-u7R_yV/view?usp=share_link)
+(Image Link: https://drive.google.com/file/d/1Fc-VSDsk-lWgyYyvzO9S3MrXLNyFgsq_/view?usp=share_link)
+(Image Link: https://drive.google.com/file/d/1FdOJtVlvA9kCHuAwuthtSaQG9eSAwETV/view?usp=share_link)
+(Image Link: https://drive.google.com/file/d/1FeUgM49DJStjpxN2GPGOzd0gTsDiUoIu/view?usp=share_link)
+Sir Coading
+-----------
+package com.org.preparedStatement;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class InsertCarData {
+	public static void main(String[] args)throws Exception {
+	String sqlString = "insert into car values(?,?,?)";
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/execute_query?user=root&password=root");
+	PreparedStatement pStatement = connection.prepareStatement(sqlString);
+	
+	pStatement.setInt(1, 101);
+	pStatement.setString(2, "Challanger");
+	pStatement.setDouble(3, 8000000);
+	
+	pStatement.execute();
+	
+	pStatement.setInt(1, 102);
+	pStatement.setString(2, "Mustang");
+	pStatement.setDouble(3, 800000);
+	
+	pStatement.execute();
+	connection.close();
+	
+	}
+}
+

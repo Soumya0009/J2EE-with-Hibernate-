@@ -1,0 +1,4 @@
+127.0.0.1 - - [09/Jul/2023:20:34:02 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [09/Jul/2023:20:34:03 +0530] "GET /Servlet-session/login.html HTTP/1.1" 200 303
+0:0:0:0:0:0:0:1 - - [09/Jul/2023:20:34:04 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [09/Jul/2023:20:34:35 +0530] "GET /Servlet-session/datainsert.html HTTP/1.1" 200 2643

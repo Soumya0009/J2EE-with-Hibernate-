@@ -1,0 +1,126 @@
+Date: 27th March 2023				Advance Java 				Balaji Sir					Day:5
+---------------------				------------				----------					-----
+Q. What is 'this' keywords?
+* It is nothing but use to call current calling object referance.
+
+package test;
+
+public class Demo{
+	static int i = 10;
+	static void m1(){
+	System.out.println("method m2");
+	}
+	void m1(){
+	System.out.println(this.i);
+	System.out.println(this.x);
+	System.out.println(Super.x);
+	}
+	public static void main(String[] args){
+		Demo d = new Demo();
+		System.out.println(d);
+		d.m1;
+	}
+}
+
+public class Demo extends ABC{
+	
+	void m1(){
+	System.out.println(this);// current calling object address(it holdes d2 object).
+	}
+	public static void main(String[] args){
+		Demo d = new Demo();
+		System.out.println(d);
+		d.m1;
+
+		Demo d1 = new Demo();
+		System.out.println(d1);
+		d1.m1;
+	}
+}
+
+Q. Where exertly we use 'this' keyword?
+
+Q. What is static area?
+* It is nothing but when we create static bloc or static method is known as static area.
+EG: class Demo{
+	void m1{ // Non-static context
+	// Non-static area
+	S.o.p(this);// possible
+	}
+	static m2(){ // Static context
+	// Static area
+	S.o.p(this);// not possible, because to call static member we need not to create any object.
+	}
+	static{
+	//Static area
+	}
+	//Non-static area
+	{
+
+	}
+}
+
+Q. class Demo{
+	int i;
+	{
+	S.o.p(i);
+	}
+	Demo(){
+	S.o.p("I am demo Constructor");// 1st Constructor executed then programmer written code executed.
+	}
+	p s v m(----){
+		Demo s = new Demo();		O.P:1. 0
+	}									2. I am demo Constructor
+  }
+
+Single-ton class
+----------------
+
+EG: 
+class Test{
+	private Test(){
+
+	}
+}
+
+JDBC(Java Database Connectivity)  [*,# normal line, **,## important line]
+--------------------------------
+* It stands for 'Java Database Connectivity'. It present as a part of standard edition of java.
+* To perform CRUD on database using java then we hava to use JDBC.
+* JDBC API contain set of classes and interfacess which will help to build verygood enviorment to perform detabase actions using Java application.
+* JDBC API is present as part of Java Standard edition, i.e java.sql.
+** JDBC API uses JDBC drivers to communicate wit database.
+* It is an API, it available in java.sql package.
+* API staands for 'application programming interface'. It containts so many classes and interfacess by the help of it  we can create the connectio of JDBC.
+EG: Scanner Class
+* JDBC was interduced by 'Sunmicro System'.
+
+Q. How to download?
+** Open NVN repository in Chrome Broweser--->Click on MY-SQL---> You get com.mysql(JDBC TYPE- 4 driver)---> MYSQL connector>>8.0.32----> Download The JAR File(link: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j/8.0.32).
+# SQL is a checked exception.
+# Except R.E all are un-checked exception.
+# Exception is a partially checked exception.
+## By defult exception child is checked exception, but we can chenge it un-checked exception.
+
+				Java 8
+					|
+    -----------------------------------------
+	|										|
+Lambda Exception						String API
+
+Collection
+----------
+* Array is not homo ginious(same objects) and not hetero genious(different objects).
+
+			Array							Col
+			-----							---
+1. Fixed in size.					1. Resizable
+2. Primitive uses/ Non-primitive	2. Non-primitive
+3. There is no methods to perform	3. PDM(I/U/D)
+   (I/U/D)
+EG: public class Demo{
+	p s v m(----){
+	int[] arr = new int[10];
+	S.o.pln(arr.getClass().getName());// O.P:[J
+	}
+}

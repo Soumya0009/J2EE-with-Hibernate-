@@ -1,0 +1,48 @@
+Date: 4th April 2023					Advance Java 				Balaji Sir 						Day-11
+--------------------					------------				----------						------
+** CUI-Character User Interface
+** GUI- Grafical User Interface
+
+(Image link: https://drive.google.com/file/d/1EBQE6D9iQyBdgHzfT3nKUjaOW7IJ_gSx/view?usp=share_link)
+(Image link: https://drive.google.com/file/d/1EEduLxLYq3ru7O0HZ6tCJvkyIsHUXVRr/view?usp=share_link)
+
+Singleton Class
+---------------
+package Demo;
+
+class Singleton{
+	private Singleton(){
+	
+	}
+	private static Singleton s = null;
+
+	public static Singleton getSingleton(){
+
+		if(s==null){
+		s=new Singleton();
+		}
+		return s;
+	}
+	
+}
+
+package Demo;
+
+class Test{
+	public static void main(String[] args){
+
+	Singleton st = Singleton.get.SingletonObj();
+	Singleton st1 = Singleton.get.SingletonObj();
+
+	System.out.println(st);
+	System.out.println(st1);
+	}
+}
+(Image link: https://drive.google.com/file/d/1EAafCJ6hgA5F5eaQnwe4ETyWRydYbKkF/view?usp=share_link)
+
+
+getConnection(url, un, pwd)
+getConnection(url, querry String)					jdbc:mysql://localhost:3306/databasename?use & pwd
+getConnection(url, properties)
+
+(Image link for home work: https://drive.google.com/file/d/1EGJDB5WBwn7wlsSBG01Z04J2iMW7j7k2/view?usp=share_link)

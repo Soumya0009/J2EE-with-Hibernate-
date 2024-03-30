@@ -1,0 +1,88 @@
+Date: 23rd March 2023								Advance Java					Balaji Sir
+---------------------								------------					----------
+Some Core Java Concept
+----------------------
+* WORA-- Write Once Run Anywhere Architecture
+* With respect to installation java is completely platform depaindent.
+* Java is not purely Object Orianted Programming Language. Because of primitives and static members in java.
+* E.G: class A{
+	A(){
+	this.10;
+	}
+	A(int x){
+
+	}
+	p s v m (----){
+		A a = new A();------> Object is created
+	}
+}
+
+* Constructer is responsible to provide defult value to non-static member.
+* E.G: class A{
+	int i;
+	void m1(){
+	S.o.pln("I am m1()");
+	}
+	p s v m (----){
+		A a = new A();------> Object is created
+	}
+	A(){ -----> It Store the nonstatic member. I ll execute programmer written source code.
+	S.o.pln("I am a constructor");
+	}
+}
+
+* Class is the blueprint of an object, it the place where we declair (not class members) java members.
+* There are 4 OOPS, OOAD (Object Orianted Architecture Design) principal in java, 4 principles in java are:
+								1. Encapsulation (All Java BEAN Classes are example of encapsulation.)
+								2. Abstraction
+								3. Inheritance
+								4. Polymorphism
+* Private is a class lable access modifier.
+* In java bean class all the members are private or fully encapsulated class, we can access them by the help of getter and setter method.
+* Classes		Interface
+	^				^
+	|				|
+	|				|
+ Extends		impliments
+
+ * In interface the defult methods are impliment in child calss directly.
+ 	E.G: class Test{
+
+ 			public static void main(String[] args){
+ 					Test t = new Test();
+ 				}
+ 				static{
+ 				System.out.println("I am a static block");
+ 				}
+ 			}
+ --------------------------------------------------------------------------------
+ 			class Demo extends Test{ // Running demo is not possible without main method although it present in parrent 
+ 										class.
+ 			}
+
+ 	E.G: Interface Test{
+
+ 			public static void main(String[] args){
+ 				}
+ 				static{
+ 				System.out.println("I am a static block");
+ 				}
+ 			}
+--------------------------------------------------------------------------------
+ 		interface Demo extends Test{ // Running demo is not possible without main method although it present in parrent 
+ 										class.
+ 		}
+
+* abstract class A{ // class abstract A(It is not possible, because after class immidietly write class name)
+	void m1(); // C.E: Method body is mandotry & we have to use abstract keyword in abstract class.
+	static void m2(); // C.E: Method body is mandotry & we have to use abstract keyword in abstract class.
+}
+* We can achive abstraction by the help of abstract keyword. Abstraction is nothing hiding the implimentation and provide the functionlity as private.
+* We can achive abstraction by declairing the variable private.
+	E.G: Arraylist[] al = new Arraylist[];
+			al.add(10);----> In this scenario this is abstraction.
+* public boolean add(E.e){ //
+	add Count++;
+}
+
+H.W: Download and install My SQL Application.

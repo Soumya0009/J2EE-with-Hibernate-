@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Example</title>
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .card {
+      border: 1px solid;
+      background-color: black;
+      color: white;
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px; 
+      box-shadow: 0 0 20px gray; 
+    }
+
+    h2 {
+      text-align: center;
+      text-decoration: underline; 
+      margin-bottom: 20px; 
+      
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+   .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  box-shadow: 0 1px 0 gray; 
+}
+    
+    .form-group input::placeholder {
+      color: #999; 
+    }
+    
+    .form-group .radio-group {
+      display: flex;
+      align-items: center;
+    }
+    
+    .form-group .radio-group label {
+      margin-right: 10px;
+    }
+    
+    .raised-button {
+      background-color: ffff;
+      color: dddd;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 0 10px gray;
+      
+    }
+    
+    .raised-button:hover {
+      color: ffff;
+      background-color: #777; 
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Fill the Details</h2>
+    <form>
+      <div class="form-group">
+        <input type="number" id="id" name="id" placeholder="Enter ID" required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Enter name" required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="age" name="age" placeholder="Enter age" required>
+      </div>
+      <div class="form-group">
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="gender" value="male" required> Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female" required> Female
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+      </div>
+      <button class="raised-button" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

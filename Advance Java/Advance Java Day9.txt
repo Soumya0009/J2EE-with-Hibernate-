@@ -1,0 +1,55 @@
+Date: 1st April 2023			Advance Java				Balaji Sir					Day:9
+--------------------			------------				----------					-----
+** Best fin 150% in note pad.
+
+(Image Link: https://drive.google.com/file/d/1Dj3vc17GWh31GnWFROXB7WRyWFDKpjKj/view?usp=share_link) 
+
+Step 1 (Load and register the driver)
+-------------------------------------
+-> We have to download JAR file provided by the database vender inorder to connect our java application to the database.
+-> If we use IDE then we have to configure JAR file inside 'java buil path' of the application.
+-> If we dont use IDE, then we have to configure our JAR file inside 'class path enviroment variable'.
+-> Sun micro system has provided 'java.sql.driver interface', it is database vender responsibility to provide implimentation class for driver interface inside JAR file.
+-> We have to load driver class provided by database vender inside java class where we are going to perform database actions.
+
+Ways to perform Step-1
+----------------------
+Way-1:
+------
+-> Class.forName("fully qualified class name");//Here class is an predefind class (it is available in java.lang package).
+
+=> Class is a pre-defind calss present in 'java.lang' package.
+=> forName is a static method present in 'Class class' which accepts one argument in the form of string. 
+=> We have to pass fully qualified name of class as argument to the 'forName()' method.
+=> forName method will throw a checked exception i.e 'class not found' exception.
+
+(Image link: https://drive.google.com/file/d/1Dfh_pIvvJPtvekBQc5GHqpUHRJJt7NUT/view?usp=share_link)
+
+Way-2:
+------
+-> By creating the Driver class Object:
+									   Driver d = new Driver();
+											^			^
+											|			|______________Com.mySql.cj.jdbc.Driver	
+									(c) Com.mysql.cj.jdbc.Driver(c)
+													or
+									(P) java.sql.Driver(I)
+(Image link: )
+
+Way-3:
+------
+DriverManager.registerDriver(newDriver());
+|-----------||--------------------------|
+	  ^						^
+	  |						|
+built in class			Static Method
+							^
+							|
+						Driver class object as argument
+
+(Image link: https://drive.google.com/file/d/1Der8I3Lwd1_OLCvNHGPokugoCn5H1nw2/view?usp=share_link)
+
+
+Step-2 (Establish connection between java application and data)
+---------------------------------------------------------------
+* Explain in Day-10.

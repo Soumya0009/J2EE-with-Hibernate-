@@ -1,0 +1,55 @@
+Date: 11th April 2023					Advance Java 				Balaji Sir 						Day-17
+---------------------					------------				----------						------
+Q. How I can found that is a checked or un-checked exception?
+Ans: package com.org;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class Test {
+	public static void main(String[] args) {
+		try {
+			Class.forName("");
+			FileInputStream fisFileInputStream = new FileInputStream("");
+		} catch (ClassNotFoundException | IOException | RuntimeException re) {
+			
+		}
+	}
+
+}
+
+Eg:
+package com.org;
+
+public class Demo {
+	static {
+		System.out.println("Demo class Static block");
+	}
+	public static void main(String[] args) throws ClassNotFoundException {
+		Class.forName("com.org.Test");
+	}
+}
+
+package com.org;
+
+public class Test {
+	static {
+		System.out.println("Test Class Static Block");
+	}
+
+}
+
+Execute Querry
+--------------
+-> execute(sql)----> Both select and non-select
+-> executeQuerry(sql)---> Select
+-> executeUpdate(sql)----> non-Select
+
+								Querry
+								   |
+					|----------------+---------------|
+				Select						non-select
+				   |								|
+				  DQL					---------+-----------------
+										|		|		|	   |
+										DDL	    DML	    TCL	  DCL

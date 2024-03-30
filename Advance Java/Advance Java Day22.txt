@@ -1,0 +1,16 @@
+Date: 22nd April 2023					Advance Java 				Balaji Sir 						Day-22
+----------------					------------				-------						------
+Coading for Date
+-------------
+import java.util.Date;
+public class Text{
+	public static void main (String[] args){
+		Date d = new Date();
+		System.out.println(d);
+		System.out.println(d.getDate());
+		System.out.println(d.getDay());
+		System.out.println(d.getYear()+1900);
+	}
+}
+
+(Code link: https://docs.google.com/document/d/1kBATWck50ScBgcY33MqIkhbrkSWq6SqBBhQbCCrBYhI/edit?usp=sharing)

@@ -1,0 +1,122 @@
+Date: 29th March 2023					Advance Java			Balaji Sir					Day-7
+---------------------					------------			----------					-----
+Q. what is class loading in java?
+Ans: Java file store in ROM, and command prompt open in RAM. From secondry memory to primery memory loading the class file is known as class loading. While class loading static block will be exicuted.
+
+(Digram Image Link: https://drive.google.com/file/d/1DHziAPNBqFjTMOMg2pWMavdGGnudSxwG/view?usp=share_link)
+
+Examples Of class loading:
+-------------------------
+For Static
+----------
+package.com.org;
+
+public class StaticTest{
+	static void m1(){
+	System.out .println("I am static m1");
+	}
+	static{
+	//System.out.println("I am static block");
+	m1();
+	}
+}
+
+(1st way)
+---------
+package.com.org;
+
+public class Test{
+	
+	static{
+	System.out.println("Static block of Test");
+	}
+	public static void main(String[] args){
+	System.out.println("Start");
+	try{
+	class.forName("Static Test"):
+	}catch(classNotFoundException e){
+	e.printStackTest();
+	}
+	System.out.println("End");
+	}
+}
+
+(2nd Way)
+---------
+package.com.org;
+
+public class StaticTest{
+	static{
+	System.out .println("I am static block");
+	}
+	public static void main(String[] args){
+		System.out.println("Start");
+		StaticTest st = new StaticTest();
+		System.out.println("End");
+	}
+}
+
+(3rd Way)
+---------
+package.com.org;
+
+public class StaticTest{
+	static{
+	System.out .println("I am static block");
+	}
+	public static void main(String[] args){
+		System.out.println("Start");
+		StaticTest.m1();
+		System.out.println("End");
+	}
+}
+
+For Non-Static
+--------------
+package.com.org;
+
+public class StartTest{
+	{
+	System.out .println("I am non-static block");
+	}
+	public  void m1(){
+    System.out .println("I am non-static method");
+	}
+}
+
+package.com.org;
+
+public class Test{
+	
+	public static void main(String[] args){
+		Class c = Class.forName("com.org.StaticTest");
+		StaticTest st = (StaticTest)c.newTestance();
+		System.out.println(st);
+		st.m1();
+	}
+}
+
+Type-4 Driver
+-------------
+-> Type-4 driver is also known as thin driver or pure java driver.
+-> In JDBC API ther wil be set of interfaces which required to provide implimentations, so database vender provides implimentation of all the interfaces inside driver software.
+-> Type-4 driver is complitly built by using java language so it is known as pure java driver.
+-> With the help of type-4 driver, we can build web applicatio as wel as standalon appliacations.
+-> Type-4 driver is ligh wait druiver and it is free resourcesed(Free of cost).
+-> It is database depaindent.
+
+My SQL				Software Driver
+------				---------------
+8.0.32(Latest)	    8.0.32(Works)
+					8.0.34(works)
+					8.0.30(Not Works)
+
+Steps to connect our java application to database
+-------------------------------------------------
+Step-1: Load and Register Driver.
+Step-2: Establish connection between Java Application and Database.
+Step-3: Establish/prepare Statement.
+Step-4: Execute Query.
+Step-5: Close connection.
+
+(Digram Image link: https://drive.google.com/file/d/1DJT_5x6fB-MsoFtor8e_JXAH1ERM2sob/view?usp=share_link)

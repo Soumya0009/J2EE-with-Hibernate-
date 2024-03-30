@@ -1,0 +1,19 @@
+
+
+<web-app>
+
+	<welcome-file-list>
+	<welcome-file>test1.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+	<servlet-name>myfirst</servlet-name>
+	<servlet-class>MyFirst</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>myfirst</servlet-name>
+	<url-pattern>/first1</url-pattern>
+	<url-pattern>/first2</url-pattern>
+	<url-pattern>/first3</url-pattern>
+	<url-pattern>/first4</url-pattern>
+	</servlet-mapping>
+</web-app>

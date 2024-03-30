@@ -1,0 +1,19 @@
+INDEX VERSION 1.4+E:\All Language\Adavnce Java\Eclipse8\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2114322981.index
+201173929.index
+3070655856.index
+623168586.index
+2083848008.index
+1002059793.index
+2142839683.index
+3365619977.index
+982943549.index
+123588595.index
+3415517252.index
+668437962.index
+147297302.index
+2209499349.index
+2424160076.index
+1531018696.index
+2900264937.index
+3935434258.index

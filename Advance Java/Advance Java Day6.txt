@@ -1,0 +1,57 @@
+Date: 28th March 2023					Advance Java					Balaji Sir				Day-6
+---------------------					------------					----------				-----
+** Note Best Fit in Notepad is 150%
+
+Java Database Connectivity (JDBC)
+---------------------------------
+JDK--->JRE---->JVM, Compiler, So many inbuild librery.
+JDK 19.0.2--->Librery--->Everything is available, all source files are availabe.
+
+package Java.sql
+public interface Driver{
+
+}				Belongs to PrintStram
+					|
+			System.out.print();-----> Overloaded paramitarised no argument Method.
+   Class<----|	  	|---->It is a static variable 
+			System.out.println();---> Overloaded paramitarised arguments(like float, long etc.) Method.
+
+* Overloading has 3 rules:
+	1. Datatype should vary// add(String)
+	2. No a rgument vary// add(String, String..)
+	3. Sequence of datatype varry//add(String, double..etc.)
+* Without database we cna't access the data. SQL+ syntax will not work in MY SQL.(Image link: https://drive.google.com/file/d/1o1Y1JDYNLvya8xZajCTFwzj2Uu5NvmK6/view?usp=share_link).
+
+# Java Application<---->JDBC(API)/Interface<----->Driver Software<----->SQL+, MY SQL,....Etc
+													  |
+									JDBC type4 driver is most popular in market.
+* java.sql.Driver(I), fully qualified name(package name + class/interface name).
+EG: In Core java application
+package com.org;
+public class Demo{//com/.class/.demo.org
+
+}
+
+Driver
+------
+-> In JDBC API there are so many interfaces are available, which healps to connect java application and databse.
+eg: Driver, connection, Statement, prepared Statements etc...(All are interfaces examples).
+-> It is database venders responsibility to provide implimentation classes for all the interfaces present in JDBC API in order to connect database in java application.
+-> Driver softwar is nothing but, which contains all the implimentation classes inorder to convert java calls to database calls and visversa.
+
+Types of Drivers
+----------------
+-> There are 5 drivers availabe in the world but 4 of them are supported by java.
+	1. JDBC - ODBC/Type-1(Image link: https://drive.google.com/file/d/1NPRv2xv4bH1cucisnnvyO1XuIP8NsHjb/view?usp=share_link)
+	2. NATIVE API/Type-2(Image link: https://drive.google.com/file/d/1i-8Xu83QRyKlwGnSX1_2esfSVzlYW78Y/view?usp=share_link )
+	3. NETWORK PROTOCOL/Type-3
+	4. Thin driver/Pure Java/Type-4 --> It is completely create using java application so it is pure java.
+
+Java						  Microsoft		   Data Base
+|	|----->|Java->ODBC|----->|ODBC->SQL|----->|+++++++++++|
+|	|	   |		  |		 |		   |	  |MY SQL/SQL+|
+|	|<-----|Java->ODBC|<-----|ODBC->SQL|<-----|Post/Data  |
+
+
+* JAR--> Java Archive(Where java application has been compressed.)
+* Heavy wait means it have to configure.

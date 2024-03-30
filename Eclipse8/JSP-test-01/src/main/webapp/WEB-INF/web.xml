@@ -1,0 +1,20 @@
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>ind</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ind</servlet-name>
+		<url-pattern>/myurl</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ins</servlet-name>
+		<jsp-file>/WEB-INF/inside.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ins</servlet-name>
+		<url-pattern>/inside</url-pattern>
+	</servlet-mapping>
+</web-app>

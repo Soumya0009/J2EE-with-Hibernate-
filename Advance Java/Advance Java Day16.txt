@@ -1,0 +1,186 @@
+Date: 10th April 2023					Advance Java 				Balaji Sir 						Day-16
+---------------------					------------				----------						------
+** We Can Store table data in java by the help of resultset.
+(Image Link: )
+Eg:
+class Test {
+	static void m1(){
+	System.out.print("Hii");
+	} 
+	public static void main(String[] args){
+	System.out.println(m1());//C.E: Saying 'void' type are not allowed here
+	}
+}
+
+class Test {
+	static int m1(){
+	return 10;
+	} 
+	public static void main(String[] args){
+	System.out.println(m1());//10
+	}
+}
+
+Check ascii value of space and tab:
+----------------------------------
+class Demo{
+	public static void main(String[] args){
+	System.out.println(' '+0);//32
+	System.out.println('	'+0);//9
+	}
+}
+
+Check any character ascii value:
+--------------------------------
+class Demo{
+	public static void main(String[] args){
+	System.out.println('A'+0);//65
+	System.out.println('1'+0);//49
+	System.out.println('*'+0);//42
+	}
+}
+
+Yesterday's Task
+----------------
+My Coading
+----------
+package com.org;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class RetriveCompanyDetailsThree {
+	public static void main(String[] args) {
+		String urlString = "jdbc:mysql://localhost:3306/mythird";
+		String userString = "root";
+		String passString = "root";
+		String driverString = "com.mysql.cj.jdbc.Driver";
+
+		String sqlString1 = "Select * From company";
+		try {
+			Class.forName(driverString);
+			Connection connection = DriverManager.getConnection(urlString,userString,passString);
+			Statement statement = connection.createStatement();
+			ResultSet rs= statement.executeQuery(sqlString1);
+
+			System.out.printf("%-5s %-15s %-10s %-10s %-15s\n", "id", "cname", "min_sal", "max_sal", "phone");//Not Recommended Way
+			while (rs.next()) {
+			    System.out.printf("%-5s %-15s %-10s %-10s %-15s\n", rs.getInt(1), rs.getString(2), rs.getDouble(3), rs.getDouble(4), rs.getLong(5));
+			}
+			
+			connection.close();
+
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
+
+Sir Code
+--------
+On Multi Line
+-------------
+package com.org;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class RetriveCompanyDetailsFive {
+	public static void main(String[] args) {
+		String urlString = "jdbc:mysql://localhost:3306/mythird";
+		String userString = "root";
+		String passString = "root";
+		String driverString = "com.mysql.cj.jdbc.Driver";
+
+		String sqlString1 = "Select * From company";
+		try {
+			Class.forName(driverString);
+			Connection connection = DriverManager.getConnection(urlString,userString,passString);
+			Statement statement = connection.createStatement();
+			ResultSet rs= statement.executeQuery(sqlString1);
+
+			System.out.print(String.format("%-5s", "id"));//This is Recommended Way
+			System.out.print(String.format("%-15s","cname"));
+			System.out.print(String.format("%-15s","max_sal"));
+			System.out.print(String.format("%-15s","min_sal"));
+			System.out.print(String.format("phone"+"\n"));
+			while (rs.next()) {
+			    
+			    System.out.print(String.format("%-5s", rs.getInt(1)));//This is Recommended Way
+				System.out.print(String.format("%-15s",rs.getString(2)));
+				System.out.print(String.format("%-15s",rs.getDouble(3)));
+				System.out.print(String.format("%-15s",rs.getDouble(4)));
+				System.out.print(String.format(rs.getLong(5)+"\n"));
+			}
+			
+			connection.close();
+
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
+
+
+On Single line
+--------------
+package com.org;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class RetriveCompanyDetailsFour {
+	public static void main(String[] args) {
+		String urlString = "jdbc:mysql://localhost:3306/mythird";
+		String userString = "root";
+		String passString = "root";
+		String driverString = "com.mysql.cj.jdbc.Driver";
+
+		String sqlString1 = "Select * From company";
+		try {
+			Class.forName(driverString);
+			Connection connection = DriverManager.getConnection(urlString,userString,passString);
+			Statement statement = connection.createStatement();
+			ResultSet rs= statement.executeQuery(sqlString1);
+
+			System.out.print(String.format("%-5s %-15s %-10s %-10s %-15s\n", "id", "cname", "min_sal", "max_sal", "phone"));//This is Recommended Way
+			while (rs.next()) {
+			    System.out.print(String.format("%-5s %-15s %-10s %-10s %-15s\n", rs.getInt(1), rs.getString(2), rs.getDouble(3), rs.getDouble(4), rs.getLong(5)));
+			}
+			
+			connection.close();
+
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
+(Image Link: https://drive.google.com/file/d/1FGIAR17VyVdZnnaX2MR-xN7r-9B14KID/view?usp=share_link)
+(Image Link: https://drive.google.com/file/d/1FGIAR17VyVdZnnaX2MR-xN7r-9B14KID/view?usp=share_link)

@@ -1,0 +1,38 @@
+Date: 26th April 2023					Advance Java 				Balaji Sir 						Day-28
+---------------------					-------------				----------						------
+
+** Best Fit: 120%
+								Application
+								-----------
+									|
+				------------------------------------------------
+				|										 |
+			Standalone App							Enterprise App
+			|	|-> No internet								|-> Network
+			|	|-> Accissable in one machine					|
+			|	|-> Modification using other machines		|--------------------------------|
+			|	    not possible						Web Application				Distributed application
+			|											|							 |
+		|----------|								Eg:	facebook						Eg: flipkart	
+		CLI	    	 GUI	
+		 |		  |
+dealing with 	  dealing with graphical 	
+characters	  components
+
+
+
+(Image link: https://drive.google.com/file/d/1HVKUVnViecHQwnidfpVhP91L_j6OzuCt/view?usp=share_link)
+
+							Web Application
+								* Internet
+								* Client-server-arch
+								* Response
+								  	|
+					|-------------------------------------|
+				Static Response					Dynamic Response
+					|									|
+				   HTML								Servelet/JSP
+
+Clint Server Image
+------------------
+(Image Link: https://drive.google.com/file/d/1HNI5VAvIDW4GdvALi-zEvimuyxm3Oq1U/view?usp=share_link)

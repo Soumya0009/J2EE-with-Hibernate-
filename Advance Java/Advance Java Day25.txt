@@ -1,0 +1,89 @@
+Date: 25th April 2023					Advance Java 				Balaji Sir 						Day-25
+---------------------					-------------				----------							------
+show variables;--->Get all the data of variables.
+
+Get all data of database through java
+-------------------------------------
+
+package com.org.helper;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ConnectionHelper {
+	public static Connection getConnectionObject() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/car_orm?user=root&password=root");
+			return connection;
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+}
+
+
+package com.org.dbmetadata;
+
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.SQLException;
+
+import com.org.helper.ConnectionHelper;
+public class FetchDatabaseMetadata {
+	public static void main(String[] args) throws SQLException {
+		Connection connection = ConnectionHelper.getConnectionObject();
+		DatabaseMetaData dbMetaData = connection.getMetaData();
+		System.out.println(dbMetaData.getURL());
+		System.out.println(dbMetaData.getUserName());
+		System.out.println(dbMetaData.getDatabaseMajorVersion());
+		System.out.println(dbMetaData.getDatabaseMinorVersion());
+		System.out.println(dbMetaData.getDatabaseProductName());
+		System.out.println(dbMetaData.getDatabaseProductVersion());
+		System.out.println(dbMetaData.getDriverName());
+		
+	}
+
+}
+
+Fetch all data from the resultset
+---------------------------------
+
+package com.org.RSmetadata;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.org.helper.ConnectionHelper;
+
+public class FetchResulsetMetatData {
+	public static void main(String[] args) throws SQLException {
+		Connection connection = ConnectionHelper.getConnectionObject();
+		Statement statement = connection.createStatement();
+		ResultSet rs = statement.executeQuery("Select*from car");
+		ResultSetMetaData resultSetMetaData = rs.getMetaData();
+		System.out.println(resultSetMetaData.getColumnCount());
+		System.out.println(resultSetMetaData.getColumnName(1));
+		System.out.println(resultSetMetaData.getColumnClassName(2));
+		System.out.println(resultSetMetaData.getColumnClassName(3));
+		System.out.println(resultSetMetaData.isNullable(2));
+		System.out.println(resultSetMetaData.isNullable(3));
+		System.out.println(resultSetMetaData.getColumnTypeName(1));
+		System.out.println(resultSetMetaData.getColumnTypeName(2));
+		System.out.println(resultSetMetaData.getColumnTypeName(3));
+		System.out.println(resultSetMetaData.getColumnDisplaySize(1));
+		System.out.println(resultSetMetaData.getColumnDisplaySize(2));
+		System.out.println(resultSetMetaData.getColumnDisplaySize(3));
+
+	}
+}
+

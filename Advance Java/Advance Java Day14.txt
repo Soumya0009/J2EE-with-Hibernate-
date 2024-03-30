@@ -1,0 +1,179 @@
+Date: 7th April 2023					Advance Java 				Balaji Sir 						Day-14
+--------------------					------------				----------						------
+(Image1 link: https://drive.google.com/file/d/1ElxGn1nJtBG9eBv4CDDwx7rcsOz7U096/view?usp=share_link)
+(Image2 link: https://drive.google.com/file/d/1Ep_qqtvFISjO3Fn2CZCusTuI4LXTgCeR/view?usp=share_link)
+(Image3 link: https://drive.google.com/file/d/1Er5kZHDfLyQ1lTpqfSel44VEBGXkCmrN/view?usp=share_link)
+(Image4 link: https://drive.google.com/file/d/1Es5i-7EC6Lo-gyVuL-pwAeol6NsuZO3X/view?usp=share_link)
+(Image5 link: https://drive.google.com/file/d/1Euvez2dN06nY7876NlGPOGVnWPqqr-Rx/view?usp=share_link)
+(Image6 link: https://drive.google.com/file/d/1Ey0b8tGylagjYppTitXSAeRO-RzE5gmo/view?usp=share_link)
+(Image7 link: https://drive.google.com/file/d/1Eyh7VQciNalsrsxMzyJ3-N2cshqYz_QU/view?usp=share_link)
+(Image8 link: https://drive.google.com/file/d/1F0ljLVtObiL7WULeTPrjCsiEIW3-Barl/view?usp=share_link)
+
+Retrive Data With 'for loop' (Long Process)
+-------------------------------------------
+package com.org;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class RetriveCompanyDetails {
+		public static void main(String[] args) {
+			String urlString = "jdbc:mysql://localhost:3306/mythird";
+			String userString = "root";
+			String passString = "root";
+			String driverString = "com.mysql.cj.jdbc.Driver";
+
+			String sqlString1 = "Select * From company";
+			try {
+				Class.forName(driverString);
+				Connection connection = DriverManager.getConnection(urlString,userString,passString);
+				Statement statement = connection.createStatement();
+				ResultSet rs= statement.executeQuery(sqlString1);
+				
+//				1st records data 				
+				if (rs.next()) {
+					int id = rs.getInt(1);
+					String nameString = rs.getString(2);
+					double minSal = rs.getDouble(3);
+					double maxSal = rs.getDouble(4);
+					long phone = rs.getLong(5);
+					
+					System.out.println(id);
+					System.out.println(nameString);
+					System.out.println(minSal);
+					System.out.println(maxSal);
+					System.out.println(phone);
+				}
+				
+				
+//				2nd Record Data	
+				if (rs.next()) {
+					int id1 = rs.getInt(1);
+					String nameString1 = rs.getString(2);
+					double minSal1 = rs.getDouble(3);
+					double maxSal1 = rs.getDouble(4);
+					long phone1 = rs.getLong(5);
+					
+					System.out.println(id1);
+					System.out.println(nameString1);
+					System.out.println(minSal1);
+					System.out.println(maxSal1);
+					System.out.println(phone1);
+				}
+				
+				
+//				3rd record Data
+				if (rs.next()) {
+					int id2 = rs.getInt(1);
+					String nameString2 = rs.getString(2);
+					double minSal2 = rs.getDouble(3);
+					double maxSal2 = rs.getDouble(4);
+					long phone2 = rs.getLong(5);
+					
+					System.out.println(id2);
+					System.out.println(nameString2);
+					System.out.println(minSal2);
+					System.out.println(maxSal2);
+					System.out.println(phone2);
+				}
+				
+				
+//				4th record Data
+				if (rs.next()) {
+					int id3 = rs.getInt(1);
+					String nameString3 = rs.getString(2);
+					double minSal3 = rs.getDouble(3);
+					double maxSal3 = rs.getDouble(4);
+					long phone3 = rs.getLong(5);
+					
+					System.out.println(id3);
+					System.out.println(nameString3);
+					System.out.println(minSal3);
+					System.out.println(maxSal3);
+					System.out.println(phone3);
+				}
+				
+				
+//				5th record Data
+				if (rs.next()) {
+					int id4 = rs.getInt(1);
+					String nameString4 = rs.getString(2);
+					double minSal4 = rs.getDouble(3);
+					double maxSal4 = rs.getDouble(4);
+					long phone4 = rs.getLong(5);
+					
+					System.out.println(id4);
+					System.out.println(nameString4);
+					System.out.println(minSal4);
+					System.out.println(maxSal4);
+					System.out.println(phone4);
+				}
+				
+				
+				connection.close();
+
+				
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+}
+	
+
+Retrive Data With 'While loop' (Short Process)/ Home work
+---------------------------------------------------------
+
+package com.org;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class RetriveCompanyDetails1 {
+
+	public static void main(String[] args) {
+		String urlString = "jdbc:mysql://localhost:3306/mythird";
+		String userString = "root";
+		String passString = "root";
+		String driverString = "com.mysql.cj.jdbc.Driver";
+
+		String sqlString1 = "Select * From company";
+		try {
+			Class.forName(driverString);
+			Connection connection = DriverManager.getConnection(urlString,userString,passString);
+			Statement statement = connection.createStatement();
+			ResultSet rs= statement.executeQuery(sqlString1);
+			
+//			1st records data 
+			while (rs.next()) {
+				
+				System.out.println(rs.getInt(1));
+				System.out.println(rs.getString(2));
+				System.out.println(rs.getDouble(3));
+				System.out.println(rs.getDouble(4));
+				System.out.println(rs.getLong(5));
+				
+			}
+			
+
+			connection.close();
+
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

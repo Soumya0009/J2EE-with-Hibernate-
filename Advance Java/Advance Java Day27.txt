@@ -1,0 +1,37 @@
+Date: 25th April 2023					Advance Java 				Balaji Sir 						Day-27
+---------------------					-------------				----------						------
+(Image Link: https://drive.google.com/file/d/1HBaRcfiPrjn_Nm3LidU35MsumCcVGFjI/view?usp=share_link)
+(Image Link: https://drive.google.com/file/d/1HAt9vNGgXYvqYPEPVZ_VBLBdP6iEg0Gu/view?usp=share_link)
+(Image Link: https://drive.google.com/file/d/1H0igGjlUA2BVm6R8F3a7ZSBADlHf1p78/view?usp=share_link)
+
+
+J2EE----|-----> JDBC
+         \----> Servlet/JSP
+
+How to Establish the connection
+-------------------------------
+-> To establish a connection in Eclipse for HTML with a server to perform servlet, you can follow these steps:
+
+1. Download and install Eclipse IDE for Java EE developers, which includes the necessary tools for servlet development.
+2. Create a new dynamic web project in Eclipse by selecting File > New > Dynamic Web Project. Enter a project name and select the target runtime, which should be an Apache Tomcat server.
+[-----------------------------------------------------------------------------------------------------------------------------------------------
+How to connect Apache Tomcat
+----------------------------
+1. First, make sure that you have installed Apache Tomcat server and the Eclipse IDE for Java EE developers.
+2. Open the Eclipse IDE and go to the "Servers" tab, which is usually located at the bottom of the workspace window. If you can't see the "Servers" tab, you can add it by going to the menu and selecting Window > Show View > Servers.
+3. Right-click in the "Servers" tab and select "New > Server" from the context menu.
+4. In the "New Server" wizard, select the Apache folder and then select the version of the Tomcat server you want to use.
+5. Next, click on the "Browse" button and select the directory where you installed Tomcat on your local machine.
+6. After you select the Tomcat installation directory, click "Finish" to create the new server instance in Eclipse.
+7. Now, you should see the new server instance in the "Servers" tab. Right-click on the server and select "Start" to start the server.
+8. Once the server is started, you can deploy your web application to the server by right-clicking on the project in the "Package Explorer" view, and selecting "Run As > Run on Server".
+9. In the "Run On Server" wizard, select the server instance you created earlier and click "Finish".
+10. Finally, your web application should be deployed and running on the Tomcat server, which you can access by opening a web browser and navigating to the URL http://localhost:8080/yourwebappname.
+-----------------------------------------------------------------------------------------------------------------------------------------------]
+3. Create a new HTML file by right-clicking on the project folder and selecting New > HTML file. You can give the file any name you want, such as index.html.
+4. Write the HTML code for the web page in the editor. You can add form elements, buttons, and other user interface components as needed.
+5. Create a new servlet class by right-clicking on the project folder and selecting New > Servlet. Give the class a name and set the package name, then click Next.
+6. In the "New Servlet" wizard, you can specify the URL pattern for the servlet, such as "/myservlet". You can also add any initialization parameters or load-on-startup settings if needed.
+7. Write the Java code for the servlet in the editor. You can implement the doGet() or doPost() method to handle HTTP requests from the HTML form.
+8. Deploy the web application to the Tomcat server by right-clicking on the project folder and selecting Run As > Run on Server. Select the Tomcat server you configured earlier and click Finish.
+9. Access the web application by entering the URL in a web browser, such as http://localhost:8080/yourprojectname/index.html. You can submit the HTML form to invoke the servlet and see the response.
